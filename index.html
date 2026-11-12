@@ -14,7 +14,7 @@
             <nav aria-label="Navegación principal">
                 <ul class="navigation">
                     <li><a href="#inicio" aria-current="page">Inicio</a></li>
-                    <li><span class="future-option">Módulos <small>Próximamente</small></span></li>
+                    <li><a href="#modulos">Módulos</a></li>
                     <li><span class="future-option">Funcionamiento <small>Próximamente</small></span></li>
                 </ul>
             </nav>
@@ -33,11 +33,53 @@
             <p class="hero-brand">RadarWM</p>
             <h1 id="hero-title">Organiza, supervisa y verifica tus actividades operativas.</h1>
             <p class="hero-description">RadarWM es una plataforma para gestionar asignaciones, registrar visitas, reportar incidencias y centralizar evidencias desde un solo lugar.</p>
-            <!-- Activate as a link only when the real modules section exists. -->
             <div class="hero-action">
-                <span class="action-preview">Explorar módulos</span>
-                <span class="action-note">Próximamente</span>
+                <a class="action-link" href="#modulos">Explorar módulos</a>
             </div>
+        </section>
+        <section id="modulos" class="modules" aria-labelledby="modules-title">
+            <h2 id="modules-title">Módulos de RadarWM</h2>
+            <p class="modules-description">Conoce las herramientas que ofrece RadarWM para organizar actividades, registrar su ejecución y mantener información centralizada sobre las operaciones.</p>
+            <section class="module-group" aria-labelledby="principales-title">
+                <h3 id="principales-title">Funcionalidades principales</h3>
+                <div class="module-grid">
+                    <article class="module-card">
+                        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V2h6v2M9 10h6M9 14h6M9 18h4"/></svg>
+                        <h4>Asignaciones</h4>
+                        <p>Planifica y organiza las actividades del personal, asociándolas con personas, ubicaciones y horarios.</p>
+                    </article>
+                    <article class="module-card">
+                        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
+                        <h4>Visitas</h4>
+                        <p>Registra y consulta la ejecución de las actividades asignadas, incluyendo sus cambios de estado.</p>
+                    </article>
+                    <article class="module-card">
+                        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 10 18H2L12 3ZM12 9v5M12 17h.01"/></svg>
+                        <h4>Incidencias</h4>
+                        <p>Registra situaciones reportadas durante las operaciones y permite dar seguimiento a su estado.</p>
+                    </article>
+                    <article class="module-card">
+                        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6ZM14 2v6h6M8 13h8M8 17h6"/></svg>
+                        <h4>Evidencias</h4>
+                        <p>Permite adjuntar y consultar archivos que documentan visitas e incidencias.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="module-group" aria-labelledby="complementarios-title">
+                <h3 id="complementarios-title">Gestión complementaria</h3>
+                <div class="module-grid">
+                    <article class="module-card">
+                        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a7 7 0 0 1 14 0v2M17 4a4 4 0 0 1 0 8M22 21v-2a7 7 0 0 0-4-6"/></svg>
+                        <h4>Personas</h4>
+                        <p>Administra la información del personal que participa en las actividades operativas.</p>
+                    </article>
+                    <article class="module-card">
+                        <svg class="module-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <h4>Ubicaciones</h4>
+                        <p>Registra y administra los lugares donde se realizan las actividades.</p>
+                    </article>
+                </div>
+            </section>
         </section>
     </main>
 </body>
