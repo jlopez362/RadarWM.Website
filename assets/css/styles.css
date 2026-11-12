@@ -323,3 +323,130 @@ p { margin: 0; }
         align-items: flex-start;
     }
 }
+
+.screenshots {
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+    scroll-margin-top: 2rem;
+}
+
+.screenshots h2 {
+    margin: 0 0 1rem;
+    color: var(--color-heading);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.screenshots-description {
+    max-width: 48rem;
+    font-size: 1.125rem;
+}
+
+.screenshot-group { margin-top: 2.5rem; }
+
+.screenshot-group h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-heading);
+    font-size: 1.25rem;
+}
+
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.screenshot-grid--admin {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.screenshot-card {
+    min-width: 0;
+    margin: 0;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+}
+
+.screenshot-card--featured { grid-column: 1 / -1; }
+
+.screenshot-link { display: block; }
+
+.screenshot-link img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.screenshot-card figcaption {
+    padding: 1rem 0.25rem 0.25rem;
+    color: var(--color-heading);
+    font-weight: 600;
+}
+
+.screenshot-grid--field { max-width: 46rem; }
+
+.screenshot-dialog {
+    width: fit-content;
+    max-width: calc(100% - 2rem);
+    max-height: calc(100dvh - 2rem);
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
+.screenshot-dialog::backdrop {
+    background: var(--color-background);
+    opacity: 0.9;
+}
+
+.screenshot-dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.screenshot-dialog h2 {
+    margin: 0;
+    color: var(--color-heading);
+    font-size: 1.125rem;
+    overflow-wrap: anywhere;
+}
+
+.screenshot-close {
+    min-height: 2.75rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-heading);
+    font: inherit;
+    cursor: pointer;
+}
+
+.screenshot-close:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.screenshot-dialog-content img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100dvh - 10rem);
+    margin-inline: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 48rem) {
+    .screenshot-grid { grid-template-columns: minmax(0, 1fr); }
+    .screenshot-grid--field { max-width: 26rem; }
+}
