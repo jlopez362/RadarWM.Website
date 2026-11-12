@@ -42,21 +42,81 @@
 body {
     margin: 0;
     min-height: 100vh;
-    padding: var(--space);
     background: var(--color-background);
     color: var(--color-text);
     font-family: var(--font-body);
     line-height: 1.6;
 }
 
+.container {
+    width: min(100% - 2 * var(--space), 76rem);
+    margin-inline: auto;
+}
+
+.site-header {
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-surface);
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem 2rem;
+    padding-block: 1.25rem;
+}
+
+a {
+    color: var(--color-heading);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.35em;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.875rem;
+}
+
+.navigation a {
+    display: inline-block;
+    padding-block: 0.625rem;
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+.future-option {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-muted);
+}
+
+.future-option small {
+    font-size: 0.6875rem;
+}
+
 .appearance {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
     align-items: center;
     gap: 0.75rem;
-    max-width: 64rem;
-    margin-inline: auto;
     font-size: 0.875rem;
 }
 
@@ -71,27 +131,88 @@ select {
     cursor: pointer;
 }
 
+a:focus-visible,
 select:focus-visible {
     outline: 3px solid var(--color-accent);
     outline-offset: 3px;
 }
 
-.intro {
-    max-width: 48rem;
-    margin: clamp(3rem, 12vh, 8rem) auto 0;
-    padding: var(--space);
-    border: 1px solid var(--color-border);
-    border-top: 4px solid var(--color-accent);
-    border-radius: var(--radius);
-    background: var(--color-surface);
+.hero {
+    max-width: 65rem;
+    padding-block: clamp(4rem, 11vw, 9rem);
+}
+
+.hero-brand {
+    margin-bottom: 1.5rem;
+    color: var(--color-heading);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
 h1 {
-    margin: 0 0 1rem;
+    margin: 0 0 2rem;
     color: var(--color-heading);
-    font-size: clamp(2rem, 6vw, 3rem);
-    line-height: 1.2;
-    letter-spacing: -0.025em;
+    font-size: clamp(2.25rem, 5.5vw, 4.75rem);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    overflow-wrap: break-word;
 }
 
 p { margin: 0; }
+
+.hero-description {
+    max-width: 44rem;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.75;
+}
+
+.hero-action {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1rem;
+    margin-top: 2.5rem;
+}
+
+/* Non-interactive preview; no hover or pointer affordances until activation. */
+.action-preview {
+    padding: 0.875rem 1.5rem;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius);
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+.action-note {
+    color: var(--color-text);
+    font-size: 0.875rem;
+}
+
+@media (max-width: 48rem) {
+    .header-content {
+        gap: 1.25rem;
+    }
+
+    .header-content nav {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .appearance {
+        margin-left: auto;
+    }
+
+    .navigation {
+        gap: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 24rem) {
+    .appearance {
+        gap: 0.375rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

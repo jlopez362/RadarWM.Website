@@ -8,17 +8,37 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <div class="appearance">
-        <label for="appearance">Apariencia</label>
-        <select id="appearance">
-            <option value="system">Sistema</option>
-            <option value="light">Claro</option>
-            <option value="dark">Oscuro</option>
-        </select>
-    </div>
-    <main class="intro">
-        <h1>RadarWM</h1>
-        <p>Plataforma para la gestión y verificación de actividades operativas.</p>
+    <header class="site-header">
+        <div class="header-content container">
+            <a class="brand" href="#inicio">RadarWM</a>
+            <nav aria-label="Navegación principal">
+                <ul class="navigation">
+                    <li><a href="#inicio" aria-current="page">Inicio</a></li>
+                    <li><span class="future-option">Módulos <small>Próximamente</small></span></li>
+                    <li><span class="future-option">Funcionamiento <small>Próximamente</small></span></li>
+                </ul>
+            </nav>
+            <div class="appearance">
+                <label for="appearance">Apariencia</label>
+                <select id="appearance">
+                    <option value="system">Sistema</option>
+                    <option value="light">Claro</option>
+                    <option value="dark">Oscuro</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <main id="inicio" class="container">
+        <section class="hero" aria-labelledby="hero-title">
+            <p class="hero-brand">RadarWM</p>
+            <h1 id="hero-title">Organiza, supervisa y verifica tus actividades operativas.</h1>
+            <p class="hero-description">RadarWM es una plataforma para gestionar asignaciones, registrar visitas, reportar incidencias y centralizar evidencias desde un solo lugar.</p>
+            <!-- Activate as a link only when the real modules section exists. -->
+            <div class="hero-action">
+                <span class="action-preview">Explorar módulos</span>
+                <span class="action-note">Próximamente</span>
+            </div>
+        </section>
     </main>
 </body>
 </html>
